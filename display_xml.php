@@ -32,7 +32,8 @@
 	$dom->formatOutput = true;
 	$dom->loadXML($xml->asXML());
 	echo $dom->saveXML();
-	$fp = fopen("display.xml","wb");
-	fwrite($fp,$xml->asXML());
-	fclose($fp);
+	$dom->save('display.xml');
+//	$fp = fopen("display.xml","wb");
+//	fwrite($fp,$xml->asXML());
+//	fclose($fp);
 ?>
